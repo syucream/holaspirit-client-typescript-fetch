@@ -4,7 +4,7 @@
 mkdir -p src
 
 # Download the OpenAPI specification
-curl -o src/swagger.json https://app.holaspirit.com/api/swagger/swagger.json
+curl -f -o src/swagger.json https://app.holaspirit.com/api/doc/swagger.json
 
 # Generate TypeScript types from OpenAPI spec
 npx openapi-typescript src/swagger.json -o src/api.ts
